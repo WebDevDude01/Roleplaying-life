@@ -4,9 +4,374 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    
-    <script src="script.js"></script>
+    <h1>The Life Game</h1>
+    <div id="profile-section">
+        <section id="section1">
+            <div id="player-profile">
+                <img src="/design-idea-images/icons8-double-up-50.png" alt="" width="25px" height="25px">
+
+                <p>LEVEL: 18</p>
+
+                <P id="ranking">E-Rank</P>
+
+
+            </div><br>
+            
+            <div id="player-profile-pic">
+                <img src="/design-idea-images/profile-pic3.jpg" alt="" width="100%" height="500px">
+            </div>
+            <div id="player-energy">
+                <div id="player-energy-icon">
+                    <img src="/design-idea-images/heart-solid-full.svg" alt="" width="20px" height="20px">
+                    <p>Daily Energy</p>
+                </div>
+
+                <div id="hp-status-bar-container" class="daily-energy-status-bar-container">
+                    <div class="icon-container">
+                        <img src="/design-idea-images/heart-solid-full-red.svg" alt="" width="20px" height="20px">
+                        <p>HP</p>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                    </div>
+                </div><br>
+
+                <div id="hp-status-bar-container" class="daily-energy-status-bar-container">
+                    <div class="icon-container">
+                        <img src="/design-idea-images/heart-solid-full-red.svg" alt="" width="20px" height="20px">
+                        <p>Mood</p>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                    </div>
+                </div><br>
+
+                <div id="hp-status-bar-container" class="daily-energy-status-bar-container">
+                    <div class="icon-container">
+                        <img src="/design-idea-images/heart-solid-full-red.svg" alt="" width="20px" height="20px">
+                        <p>Concentration</p>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                    </div>
+                </div><br>
+
+                <div id="hp-status-bar-container" class="daily-energy-status-bar-container">
+                    <div class="icon-container">
+                        <img src="/design-idea-images/heart-solid-full-red.svg" alt="" width="20px" height="20px">
+                        <p>Motivation</p>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                        <div class="individual-progress-bar"></div>
+                    </div>
+                </div><br>
+
+
+                
+            </div>
+            <div id="player-stats">
+                <div class="player-stats-progess">
+                    <img src="#" alt="">
+                    <p>Stats</p>
+                </div>
+                <hr>
+
+                <div class="player-stats-progess">
+                </div>
+                <hr>
+
+                <div class="player-stats-progess">
+                    <div class="player-stats-progress-bar-icon">
+                        <img src="/stats-icon-images/person-running-solid-full.svg" alt="">
+                        <p>Physical</p>
+                    </div>
+                    
+
+                    <div class="player-stats-progress-bar">
+                        <p id="physical-level-number" value="">0</p>
+                        <svg width="233" height="9" viewBox="0 0 233 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="M0.0104229 4.53685C0.585564 0.0541843 77.5774 0.498692 134.721 1.59593C171.989 2.31113 232.913 -0.235688 232.75 4.22739C232.525 10.3451 134.045 7.87626 89.0013 7.23356C39.1891 6.52242 -0.727053 10.2816 0.0104229 4.53685Z" fill="#DADBDD" />
+                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="233" height="9">
+                    <path d="M0.0104229 4.53685C0.585564 0.0541843 77.5774 0.498692 134.721 1.59593C171.989 2.31113 232.913 -0.235688 232.75 4.22739C232.525 10.3451 134.045 7.87626 89.0013 7.23356C39.1891 6.52242 -0.727053 10.2816 0.0104229 4.53685Z" fill="#DADBDD" />
+                </mask>
+                <g mask="url(#mask0)">
+                    <ellipse rx="49.9644" ry="25.4799" transform="matrix(0.943377 0.331722 -0.657906 0.7531 34.4845 13.7852)" fill="#008000" />
+                </g>
+                        </svg>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="player-stats-progess">
+                    <div class="player-stats-progress-bar-icon">
+                        <img src="/stats-icon-images/head-side-virus-solid-full.svg" alt="">
+                        <p id="">Psyche</p>
+                    </div>
+                    <div class="player-stats-progress-bar">
+                        <p id="psyche-level-number" value="0">0</p>
+                        <svg width="233" height="9" viewBox="0 0 233 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="M0.0104229 4.53685C0.585564 0.0541843 77.5774 0.498692 134.721 1.59593C171.989 2.31113 232.913 -0.235688 232.75 4.22739C232.525 10.3451 134.045 7.87626 89.0013 7.23356C39.1891 6.52242 -0.727053 10.2816 0.0104229 4.53685Z" fill="#DADBDD" />
+                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="233" height="9">
+                    <path d="M0.0104229 4.53685C0.585564 0.0541843 77.5774 0.498692 134.721 1.59593C171.989 2.31113 232.913 -0.235688 232.75 4.22739C232.525 10.3451 134.045 7.87626 89.0013 7.23356C39.1891 6.52242 -0.727053 10.2816 0.0104229 4.53685Z" fill="#DADBDD" />
+                </mask>
+                <g mask="url(#mask0)">
+                    <ellipse rx="49.9644" ry="25.4799" transform="matrix(0.943377 0.331722 -0.657906 0.7531 34.4845 13.7852)" fill="#008000" />
+                </g>
+                        </svg>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="player-stats-progess">
+                    <div class="player-stats-progress-bar-icon">
+                        <img src="/stats-icon-images/pen-nib-solid-full.svg" alt="">
+                        <p id="">Intel</p>
+                    </div>
+                    <div class="player-stats-progress-bar">
+                        <p id="intel-level-number" value="0" >0</p>
+                        <svg width="233" height="9" viewBox="0 0 233 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="M0.0104229 4.53685C0.585564 0.0541843 77.5774 0.498692 134.721 1.59593C171.989 2.31113 232.913 -0.235688 232.75 4.22739C232.525 10.3451 134.045 7.87626 89.0013 7.23356C39.1891 6.52242 -0.727053 10.2816 0.0104229 4.53685Z" fill="#DADBDD" />
+                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="233" height="9">
+                    <path d="M0.0104229 4.53685C0.585564 0.0541843 77.5774 0.498692 134.721 1.59593C171.989 2.31113 232.913 -0.235688 232.75 4.22739C232.525 10.3451 134.045 7.87626 89.0013 7.23356C39.1891 6.52242 -0.727053 10.2816 0.0104229 4.53685Z" fill="#DADBDD" />
+                </mask>
+                <g mask="url(#mask0)">
+                    <ellipse rx="49.9644" ry="25.4799" transform="matrix(0.943377 0.331722 -0.657906 0.7531 34.4845 13.7852)" fill="#008000" />
+                </g>
+                        </svg>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- <div class="player-stats-progess">
+                    <div class="player-stats-progress-bar-icon">
+                        <img src="/stats-icon-images/code-solid-full.svg" alt="">
+                        <p id="">Craft</p>
+                    </div>
+                    <div class="player-stats-progress-bar">
+                        <p id="craft-level-number" value="0">0</p>
+                        <svg width="233" height="9" viewBox="0 0 233 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="M0.0104229 4.53685C0.585564 0.0541843 77.5774 0.498692 134.721 1.59593C171.989 2.31113 232.913 -0.235688 232.75 4.22739C232.525 10.3451 134.045 7.87626 89.0013 7.23356C39.1891 6.52242 -0.727053 10.2816 0.0104229 4.53685Z" fill="#DADBDD" />
+                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="233" height="9">
+                    <path d="M0.0104229 4.53685C0.585564 0.0541843 77.5774 0.498692 134.721 1.59593C171.989 2.31113 232.913 -0.235688 232.75 4.22739C232.525 10.3451 134.045 7.87626 89.0013 7.23356C39.1891 6.52242 -0.727053 10.2816 0.0104229 4.53685Z" fill="#DADBDD" />
+                </mask>
+                <g mask="url(#mask0)">
+                    <ellipse rx="49.9644" ry="25.4799" transform="matrix(0.943377 0.331722 -0.657906 0.7531 34.4845 13.7852)" fill="#008000" />
+                </g>
+                        </svg>
+                    </div>
+                </div>
+                <hr> -->
+
+                <div class="player-stats-progess">
+                    <div class="player-stats-progress-bar-icon">
+                        <img src="/stats-icon-images/yin-yang-solid-full.svg" alt="">
+                        <p id="">Spiritual</p>
+                    </div>
+                    <div class="player-stats-progress-bar">
+                        <p id="spiritual-level-number" value="0">0</p>
+            <svg width="233" height="9" viewBox="0 0 233 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="M0.0104229 4.53685C0.585564 0.0541843 77.5774 0.498692 134.721 1.59593C171.989 2.31113 232.913 -0.235688 232.75 4.22739C232.525 10.3451 134.045 7.87626 89.0013 7.23356C39.1891 6.52242 -0.727053 10.2816 0.0104229 4.53685Z" fill="#DADBDD" />
+                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="233" height="9">
+                    <path d="M0.0104229 4.53685C0.585564 0.0541843 77.5774 0.498692 134.721 1.59593C171.989 2.31113 232.913 -0.235688 232.75 4.22739C232.525 10.3451 134.045 7.87626 89.0013 7.23356C39.1891 6.52242 -0.727053 10.2816 0.0104229 4.53685Z" fill="#DADBDD" />
+                </mask>
+                <g mask="url(#mask0)">
+                    <ellipse rx="49.9644" ry="25.4799" transform="matrix(0.943377 0.331722 -0.657906 0.7531 34.4845 13.7852)" fill="#008000" />
+                </g>
+            </svg>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="player-stats-progess">
+                    <div class="player-stats-progress-bar-icon">
+                        <img src="/stats-icon-images/gem-solid-full.svg" alt="">
+                        <p >Core</p>
+                    </div>
+                    <div class="player-stats-progress-bar">
+                        <p id="core-level-number">0<p>
+            <svg width="233" height="9" viewBox="0 0 233 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="M0.0104229 4.53685C0.585564 0.0541843 77.5774 0.498692 134.721 1.59593C171.989 2.31113 232.913 -0.235688 232.75 4.22739C232.525 10.3451 134.045 7.87626 89.0013 7.23356C39.1891 6.52242 -0.727053 10.2816 0.0104229 4.53685Z" fill="#DADBDD" />
+                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="233" height="9">
+                    <path d="M0.0104229 4.53685C0.585564 0.0541843 77.5774 0.498692 134.721 1.59593C171.989 2.31113 232.913 -0.235688 232.75 4.22739C232.525 10.3451 134.045 7.87626 89.0013 7.23356C39.1891 6.52242 -0.727053 10.2816 0.0104229 4.53685Z" fill="#DADBDD" />
+                </mask>
+                <g mask="url(#mask0)">
+                    <ellipse rx="49.9644" ry="25.4799" transform="matrix(0.943377 0.331722 -0.657906 0.7531 34.4845 13.7852)" fill="#008000" />
+                </g>
+            </svg>
+                    </div>
+                </div>
+                <hr>
+                
+            </div>
+            
+        </section>
+
+        <section id="section2">Section 2
+            <!-- <div>
+                <div>
+                    <img src="" alt="">
+                    <p>Freedom</p>
+                </div>
+            </div> -->
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <div class="scenarios">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div>
+                <canvas id="myChart2"></canvas>
+            </div>
+        </section>
+
+
+
+        <section id="section3">Section 3
+            <div id="create-action">
+                <form>
+                    <div>
+                        <label for="">Action</label>
+                        <input id="player-action" type="text" placeholder="Enter Action">
+                    </div>
+
+                    <div>
+                    <label for="category">category</label>
+                    <select name="category" id="category">
+                        <option>Select Category</option>
+                        <option value="physical">physical</option>
+                        <option value="psyche">psyche</option>
+                        <option value="intel">intel</option>
+                        <option value="spiritual">spiritual</option>
+                        <option value="core">core</option>
+                    </select>
+                    </div>
+
+                    <div>
+                        <label for="">Sub Category</label>
+                        <select name="" id="sub-category">
+                            <option>Select Sub Category</option>
+                            <optgroup label="Physical">
+                                <option value="endurance">Endurance</option>
+                                <option value="strength">Strength</option>
+                                <option value="mobility">Mobility</option>
+                                <option value="vitality">Vitality</option>
+                                <option value="discipline">Discipline</option>
+                                <option value="dexterity">Dexterity</option>
+                            </optgroup>
+                            <optgroup label="Psyche">
+                                <option value="emotional-regulation">Emotional Regualtion</option>
+                                <option value="willpower">Willpower</option>
+                                <option value="clarity">Clarity</option>
+                                <option value="self-awareness">Self-Awareness</option>
+                                <option value="stress-resitance">Stress-Resitance</option>
+                                <option value="motivation">Motivation</option>
+                            </optgroup>
+                            <optgroup label="Intel">
+                                <option value="problem-solving">Problem Solving</option>
+                                <option value="learning-speed">Learning speed</option>
+                                <option value="memory">Memory</option>
+                                <option value="analytics">Analytics</option>
+                                <option value="communication">communication</option>
+                                <option value="curiosity">Curiosity</option>
+                            </optgroup>
+                            <optgroup label="Spiritual">
+                                <option value="mindfullness">Mindfullness</option>
+                                <option value="gratitude">Gratitude</option>
+                                <option value="compassion">Compassion</option>
+                                <option value="connection">Connection</option>
+                                <option value="purpose-alignment">purpose Alignment</option>
+                                <option value="faith-trust">Faith/Trust</option>
+                            </optgroup>
+                            <optgroup label="Core">
+                                <option value="authenticity">Authenticity</option>
+                                <option value="integrity">Integrity</option>
+                                <option value="responsibility">Responsibility</option>
+                                <option value="humility">Humility</option>
+                                <option value="courage">Courage</option>
+                                <option value="respect">Respect</option>
+                            </optgroup>
+                        </select>
+
+                        <label>Task Importance</label>
+                        <select name="" id="task-importance">
+                            <option>Select Task Importance</option>
+                            <option value="small-task">Small Task </option>
+                            <option value="medium-task">Medium Task</option>
+                            <option value="big-task">Big Task</option>
+                            <option value="Transformational">Transformational Task</option>
+                        </select>
+
+                    </div>
+                        <button id="add-action" type="button">Submit Action</button>
+                </form>
+                    <div id="action-board">
+                        <!-- <div id="action-ticket01" class="action-ticket">
+                            <h1 class="action-title">Habit</h1>
+                            <p class="action-category">Category</p>
+                            <p class="action-sub-category">Sub Category</p>
+                            <p class="task-importance">Task Importance</p>
+                            <button id="submit-action" type="button">Complete Action</button>
+                        </div> -->
+
+                        <div id="action-1" class="action-ticket">
+                        </div>
+                        <div class="action2"></div>
+                        <div class="action2"></div>
+                    </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- <script src="actions.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"></script>
+    <script src="/playerCharts.js"></script>
+
+
 </body>
 </html>
