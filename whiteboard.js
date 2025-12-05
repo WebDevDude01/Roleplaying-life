@@ -15,27 +15,54 @@
 //         lowNumber = numberArray[i]
 //     }
 // }
-let items = JSON.parse(localStorage.getItem("myItems")) || [];
-let input = document.getElementById("user-input");
-let div = document.getElementById("local-storage-container");
-let storageItems = document.getElementById("storage-items");
-const button = document.getElementById("submit");
 
 
-let saveStorage = [];
-let saveStorageStringify = [];
+// let items = JSON.parse(localStorage.getItem("myItems")) || [];
+// let input = document.getElementById("user-input");
+// let div = document.getElementById("local-storage-container");
+// let storageItems = document.getElementById("storage-items");
+// const button = document.getElementById("submit");
+// const clearButton = document.getElementById("clear");
 
 
 
-function saveInput() {
-    saveStorageStringify.push(localStorage.setItem("userText",input.value));
-    saveStorage.push(input.value);
-    let inputItem = document.createElement("li");
-    inputItem.append(document.createTextNode(input.value));
-    storageItems.append(inputItem);
+// for(let i = 0; i < items.length; i++) {
+//     let retrievedItems = JSON.parse(localStorage.getItem("myItems"))
+//     let inputItem = document.createElement("li");
+//     let inputItemNode  = document.createTextNode(retrievedItems[i]);
+//     inputItem.append(inputItemNode);
+//     storageItems.append(inputItem)
+// }
 
-    input.value = ""
-    console.log(saveStorage);
-}
+// function clearAll() {
+//     localStorage.clear();
+//     window.location.reload();
+// }
 
-button.addEventListener("click", saveInput);
+// function saveInput() {
+// items.push(input.value);
+// localStorage.setItem("myItems", JSON.stringify(items));
+// let retrievedItems = JSON.parse(localStorage.getItem("myItems"))
+// let inputItem = document.createElement("li");
+// let inputItemNode  = document.createTextNode(input.value);
+// inputItem.append(inputItemNode);
+// storageItems.append(inputItem)
+
+
+
+// input.value = "";
+// }
+
+// button.addEventListener("click", saveInput);
+// clearButton.addEventListener("click", clearAll );
+
+
+let actionCounter = 0;
+let text = "user-action"
+let btn = document.getElementById("create-id");
+btn.addEventListener("click", function() {
+    const para = document.createElement("h1");
+    para.id = text + actionCounter;
+    actionCounter++;
+    console.log(para);
+} );
