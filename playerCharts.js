@@ -1,27 +1,30 @@
 // import Chart from "chart.js/auto"
 
 // const { createElement } = require("react");
+
+// =======RELOAD PAGE USING LOCAL STORAGE=========
 let localStorageItems = JSON.parse(localStorage.getItem("userAction")) || [];
 
 let action1 = document.getElementById("action-1");
   let counter = 0;
-  let submittedActiion = "submitted-action"
-
+  let actionDivCounter = 0;
 for(let i = 0; i < localStorageItems.length; i++) {
 
   
-
+  const actionDiv = document.createElement("div");
   const actionPara1 = document.createElement("h1");
   const catagoryPara1 = document.createElement("p");
-  const EXP = document.createElement("p");
+  const subCategoryPara = document.createElement("p");
   const importancePara1 = document.createElement("p");
-
+  const hr = document.createElement("hr");
   const button = document.createElement("button");
-  button.id = submittedActiion + counter++;
-  
+  button.id = "submitted-action" + counter++;
+  actionDiv.id = "actionDiv" + actionDivCounter++
+  actionDiv.classList.add("action-ticket")
 
   const actionNode = document.createTextNode(localStorageItems[i]["userAction"]);
   const categoryNode = document.createTextNode(localStorageItems[i]["category"]);
+  const subCategoryParaNode = document.createTextNode(localStorageItems[i]["actionSubCategory"])
   const importanceNode = document.createTextNode(localStorageItems[i]["actionImportance"]);
 
   const buttonNode = document.createTextNode("Complete");
@@ -29,18 +32,21 @@ for(let i = 0; i < localStorageItems.length; i++) {
 
   actionPara1.append(actionNode);
   catagoryPara1.append(categoryNode);
-
+  subCategoryPara.append(subCategoryParaNode);
   importancePara1.append(importanceNode);
   button.append(buttonNode);
 
-
-  action1.append(actionPara1);
-  action1.append(catagoryPara1);
-
-  action1.append(importancePara1);
-  action1.append(button);
+  action1.append(actionDiv);
+  actionDiv.append(actionPara1);
+  actionDiv.append(catagoryPara1);
+  actionDiv.append(subCategoryPara)
+  actionDiv.append(importancePara1);
+  actionDiv.append(button);
+  actionDiv.append(hr);
 }
+// ===============================================
 
+// ===============MY CHART======================== 
 const thirtyDays = {}
 for(let i = 0; i < 31; i++) {
   thirtyDays[i] = 0;
@@ -85,11 +91,12 @@ function range(){
   return days
 }
 range();
-
-
-
 const ctx = document.getElementById("myChart");
 const ctx2 = document.getElementById("myChart2");
+// ===============================================
+
+
+
 // const physicalStat = document.getElementById("physical-level-number").value = dailyEnergy.physical
 // const psycheStat = document.getElementById("psyche-level-number");
 // const intelStat = document.getElementById("intel-level-number");
@@ -168,6 +175,7 @@ let coreStatObj = {
     respect: 0
   }
 }
+// ===============================================
 
 
 
@@ -189,7 +197,7 @@ intelLevelNumber.innerHTML = intelLevelNumber.value;
 spiritualLevelNumber.innerHTML = spiritualLevelNumber.value;
 coreLevelNumber.innerHTML = coreLevelNumber.value;
 
-
+// ===============================================//
 
   // =========  SECITON 3 PLAYER ACTIONS=====================
 
@@ -526,10 +534,10 @@ coreLevelNumber.innerHTML = coreLevelNumber.value;
 //   }
 
 // ==========CREATING AND ADDING NEW ACTIONS=================//
-let submitAction = document.getElementById("submit-action"); 
+// let submitAction = document.getElementById("submit-action"); 
 let addAction = document.getElementById("add-action");
 let actionsList = [];
-
+const actionBoard = document.querySelector("#action-board");
 function addNewAction() {
 // let actionTitle = document.createElement("p")
 // let actionCategory = document.createElement("p");
@@ -569,13 +577,15 @@ function addNewAction() {
 
   localStorageItems.push(itemObject);
   localStorage.setItem("userAction", JSON.stringify(localStorageItems) )
-
+  const actionDiv = document.createElement("div")
   const actionPara = document.createElement("h1");
   const catagoryPara = document.createElement("p");
   const EXP = document.createElement("p");
   const importancePara = document.createElement("p");
 
   const button = document.createElement("button");
+
+  const horizontalRule = document.createElement("hr")
   
 
   const actionNode = document.createTextNode(playerAction.value);
@@ -590,11 +600,20 @@ function addNewAction() {
   button.append(buttonNode);
 
 
-  action1.append(actionPara);
-  action1.append(catagoryPara);
-  action1.append(EXP);
-  action1.append(importancePara);
-  action1.append(button);
+  actionDiv.append(actionPara);
+  actionDiv.append(catagoryPara);
+  actionDiv.append(EXP);
+  actionDiv.append(importancePara);
+  actionDiv.append(button);
+  actionDiv.append(horizontalRule);
+  action1.append(actionDiv)
+
+
+  // action1.append(actionPara);
+  // action1.append(catagoryPara);
+  // action1.append(EXP);
+  // action1.append(importancePara);
+  // action1.append(button);
   playerAction.value = "";
   selection.value = "Select Category";
   TaskImportance.value = "Select Task Importance";
@@ -603,6 +622,45 @@ function addNewAction() {
 
   
 }
+console.log(actionBoard)
+
+
+
+// =================UPDATING PLAYER SKILLS=========//
+// event delegation for actions that are created.
+actionBoard.addEventListener("click", (e) => {
+  console.log(e.target);
+  console.log(e.value = localStorageItems)
+})
+
+// document.getElementById("submitted-action0").addEventListener("click", () => {
+// switch(localStorageItems[0]["actionImportance"] && localStorageItems[0]["actionSubCategory"]) {
+//   case smallTask:
+//   case localStorageItems[0]["actionSubCategory"]:
+//     physicalStatObj.physicalSubStats.strength += 5;
+//     console.log("plus 5");
+//     break;
+//   case mediumTask:
+//   case localStorageItems[0]["actionSubCategory"]:
+//     physicalStatObj.physicalSubStats.strength += 10;
+//     console.log("plus 10");
+//     break;
+//   case bigTask:
+//   case localStorageItems[0]["actionSubCategory"]:
+//     physicalStatObj.physicalSubStats.strength += 20;
+//     console.log("plus 20");
+//     break;
+//   case transformationalTask:
+//   case localStorageItems[0]["actionSubCategory"]:
+//     physicalStatObj.physicalSubStats.strength += 50;
+//     console.log("plus 50")
+//     break;
+//   default:
+//     console.log("Can't find value to compare")
+// }
+// });
+// ===============================================//
+
 
 
 // 
